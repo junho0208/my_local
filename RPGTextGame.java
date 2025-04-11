@@ -153,12 +153,12 @@ public class RPGTextGame {
 	static int hero_attack() {
 		int sum;
 		sum = hero_level * 10 + hero_power * 30;
-		System.out.println(monster_name + "가 받는 데미지는 " + sum + " 입니다.");
+		System.out.println(monster_name + "가 받는 데미지는 " + (sum - monster_defense) + " 입니다.");
 		return sum;
 	}
 
 	static int monster_attack() {
-		System.out.println(hero_name + "가 받는 데미지는 " + monster_power + " 입니다.");
+		System.out.println(hero_name + "가 받는 데미지는 " + (monster_power - hero_defense) + " 입니다.");
 		return monster_power;
 	}
 
